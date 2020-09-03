@@ -1,0 +1,20 @@
+PODS:
+  - FCFileManager (1.0.20)
+  - hpple (0.2.0)
+
+DEPENDENCIES:
+  - FCFileManager
+  - hpple
+
+SPEC REPOS:
+  trunk:
+    - FCFileManager
+    - hpple
+
+SPEC CHECKSUMS:
+  FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+
+PODFILE CHECKSUM: 58f3b07278e55eb16af1d66a56968b6efa132209
+
+COCOAPODS: 1.9.0

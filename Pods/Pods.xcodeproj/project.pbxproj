@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0034BE100DB705A9AF7C2F390497036D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A0609D5A0E4EDB2965BD5581EF29FA /* UIKit.framework */; };
+		067FF47A4AA9331FD3C2087245EFBA2D /* FCFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83760299F3015DD1F8CA76E31E6B52BA /* FCFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1059B7DE56DD8170F0659BDCD930A6C0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81FAF93CCA8702882D3563F845D35E8 /* ImageIO.framework */; };
+		11341C7139AB4F56FEFD9E98BD895D9C /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B146A0087C4EBD4E29039816A96599F /* FCFileManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		21F4C27AE64D23CDE5908032107CD9BD /* TFHpple.h in Headers */ = {isa = PBXBuildFile; fileRef = 68A43E942C54A664BB20189F408EF884 /* TFHpple.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AD2B4D5758563A8938CD4CFA4D720AF /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FE0FBB3A0A73D4F05B561A0E5445DD /* TFHppleElement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		58BA1A70120A1483AAA6172E0762A898 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A3F33705F062D6B58641557FD28FF0 /* Foundation.framework */; };
+		79E83B5CF667F5AD8DD9705C2B471441 /* XPathQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = C70ED7AB3B08440E6C83A4420F2FB316 /* XPathQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E270FBD703055B6D241EEB9A9F325F5 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 9582DB9DB5C17F8316345CB559571855 /* TFHpple.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		936317F8D50B259542A652D47DEB6CB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A3F33705F062D6B58641557FD28FF0 /* Foundation.framework */; };
+		9C05BA02E1F4778791D9C4CD22D4BB13 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A0B452DBA21967459EBEB5F9CF2029 /* XPathQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9E32A82F1EFFD9334141FAC8197C373F /* hpple-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3CFA6CB84DFA667C292AAD78D917D9 /* hpple-dummy.m */; };
+		C05362FC30B296374A9BAEBA62834A22 /* FCFileManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFDD534D6480D96941BA11DB7F67B1B9 /* FCFileManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D367BA1A3323A009167CD04F6CF71DC4 /* hpple-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D919BEF3E810F83BFB9756EEDC8413B /* hpple-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7E2C7E5BDB7601C5B3797B49E79096E /* Pods-hpple解析html-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A1DAE6C0734B59F496DA821264569 /* Pods-hpple解析html-dummy.m */; };
+		E1633049980A39ED7F41AA4EBCAF8CF4 /* FCFileManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 590BFEDB4358B8C04FD5092B9DD6FCC5 /* FCFileManager-dummy.m */; };
+		E6392B65B15867FC1522307580E6A71B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A3F33705F062D6B58641557FD28FF0 /* Foundation.framework */; };
+		EADA9DAB84E2C7F2E39C35DD0A7ADDFF /* Pods-hpple解析html-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9634646866CDCF96CCDCB7BCA055F2E3 /* Pods-hpple解析html-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED9ACA3693DBBFD0433C7D2D5BA06EA0 /* TFHppleElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 2908E81769CB2DC15357CF5BFDE91B4D /* TFHppleElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BC9C54488E783AE2C78F5E683F153C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDE4C71771901FDBEF496602452E2EE;
+			remoteInfo = FCFileManager;
+		};
+		BEC128FF1C59D6B0FA0B82345DB5B7A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D6E68B14CE9C73B6328D555F75A7169;
+			remoteInfo = hpple;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B146A0087C4EBD4E29039816A96599F /* FCFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FCFileManager.m; path = FCFileManager/FCFileManager.m; sourceTree = "<group>"; };
+		0E067BD76EA24DEA1783A301E6B940F8 /* hpple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = hpple.debug.xcconfig; sourceTree = "<group>"; };
+		0E6A1DAE6C0734B59F496DA821264569 /* Pods-hpple解析html-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hpple解析html-dummy.m"; sourceTree = "<group>"; };
+		1171837C199810B5B7C30F938B4CD089 /* FCFileManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FCFileManager.debug.xcconfig; sourceTree = "<group>"; };
+		11A3F33705F062D6B58641557FD28FF0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		131E65442734B82335FD05744EB4FD96 /* Pods-hpple解析html.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hpple解析html.debug.xcconfig"; sourceTree = "<group>"; };
+		15A199EC6C86400F56A4D929BCB3E226 /* Pods-hpple解析html-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hpple解析html-Info.plist"; sourceTree = "<group>"; };
+		24A0609D5A0E4EDB2965BD5581EF29FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2908E81769CB2DC15357CF5BFDE91B4D /* TFHppleElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		2D919BEF3E810F83BFB9756EEDC8413B /* hpple-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "hpple-umbrella.h"; sourceTree = "<group>"; };
+		301B0FF9DFD249819AA9E3CF78CC5FCA /* FCFileManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FCFileManager.modulemap; sourceTree = "<group>"; };
+		3AF15A2188427E43D7E4ADE0374C1432 /* hpple.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = hpple.modulemap; sourceTree = "<group>"; };
+		5320AA96F3FBC9E264D9F4B24BADDCB8 /* FCFileManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FCFileManager.release.xcconfig; sourceTree = "<group>"; };
+		56A0B452DBA21967459EBEB5F9CF2029 /* XPathQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		590BFEDB4358B8C04FD5092B9DD6FCC5 /* FCFileManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FCFileManager-dummy.m"; sourceTree = "<group>"; };
+		68A43E942C54A664BB20189F408EF884 /* TFHpple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		6EF43B9BB25C09A3A2FFD915EF5FCE95 /* FCFileManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FCFileManager-prefix.pch"; sourceTree = "<group>"; };
+		70FE0FBB3A0A73D4F05B561A0E5445DD /* TFHppleElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		83760299F3015DD1F8CA76E31E6B52BA /* FCFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FCFileManager.h; path = FCFileManager/FCFileManager.h; sourceTree = "<group>"; };
+		8D96966E64EBEF43B4D6B2CFCE829F81 /* hpple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = hpple.release.xcconfig; sourceTree = "<group>"; };
+		9582DB9DB5C17F8316345CB559571855 /* TFHpple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		9634646866CDCF96CCDCB7BCA055F2E3 /* Pods-hpple解析html-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hpple解析html-umbrella.h"; sourceTree = "<group>"; };
+		98BECC7A2EECA8AA162E84D55B9C1F89 /* Pods-hpple解析html-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hpple解析html-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E0780AB5645EBCAD31711ADE673F918 /* hpple-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "hpple-Info.plist"; sourceTree = "<group>"; };
+		BFDD534D6480D96941BA11DB7F67B1B9 /* FCFileManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FCFileManager-umbrella.h"; sourceTree = "<group>"; };
+		C70ED7AB3B08440E6C83A4420F2FB316 /* XPathQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		C81FAF93CCA8702882D3563F845D35E8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		DCDD4A255D310D48136CDBC1EDC3391C /* Pods-hpple解析html.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hpple解析html.release.xcconfig"; sourceTree = "<group>"; };
+		E03CC2C523D4A24BD949689E165BCAD0 /* Pods-hpple解析html.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-hpple解析html.modulemap"; sourceTree = "<group>"; };
+		E08913ABA999BE7E8F5D1EED249BBD46 /* hpple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = hpple.framework; path = hpple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E230DE09FA2EF15293F46A914802D144 /* Pods_hpple__html.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_hpple__html.framework; path = "Pods-hpple解析html.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E34D533062B7D2ADB1AC33D4B064A404 /* hpple-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "hpple-prefix.pch"; sourceTree = "<group>"; };
+		E47F80D6E715907B07DA62D9BD6E11A0 /* FCFileManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FCFileManager.framework; path = FCFileManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C4A0DE9D3B6541CC17F3500E85AC8C /* FCFileManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FCFileManager-Info.plist"; sourceTree = "<group>"; };
+		EA3CFA6CB84DFA667C292AAD78D917D9 /* hpple-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "hpple-dummy.m"; sourceTree = "<group>"; };
+		F344C0A4C400869575220C1FD790782D /* Pods-hpple解析html-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hpple解析html-frameworks.sh"; sourceTree = "<group>"; };
+		F3B067EF001701B4BC6978FCFD91D7DE /* Pods-hpple解析html-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hpple解析html-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54594F886A90FF69F474146E9AD3CA8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BA1A70120A1483AAA6172E0762A898 /* Foundation.framework in Frameworks */,
+				1059B7DE56DD8170F0659BDCD930A6C0 /* ImageIO.framework in Frameworks */,
+				0034BE100DB705A9AF7C2F390497036D /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79C2FFAD6B773F67BE52C462CE3DACB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				936317F8D50B259542A652D47DEB6CB0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B1E48EFA25B90C57945C54FC317330E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6392B65B15867FC1522307580E6A71B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3E11866C04ED21F74520A124D366384 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08ECF4736828A4C7CCC9C4CC951A1343 /* FCFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				83760299F3015DD1F8CA76E31E6B52BA /* FCFileManager.h */,
+				0B146A0087C4EBD4E29039816A96599F /* FCFileManager.m */,
+				5F219D33171DA41BFD8E442A6CAD845B /* Support Files */,
+			);
+			name = FCFileManager;
+			path = FCFileManager;
+			sourceTree = "<group>";
+		};
+		1FBB648B4B93FD3645E615B4C5F7919E /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				68A43E942C54A664BB20189F408EF884 /* TFHpple.h */,
+				9582DB9DB5C17F8316345CB559571855 /* TFHpple.m */,
+				2908E81769CB2DC15357CF5BFDE91B4D /* TFHppleElement.h */,
+				70FE0FBB3A0A73D4F05B561A0E5445DD /* TFHppleElement.m */,
+				C70ED7AB3B08440E6C83A4420F2FB316 /* XPathQuery.h */,
+				56A0B452DBA21967459EBEB5F9CF2029 /* XPathQuery.m */,
+				897970F1AD3CF54949E2DB7914E6F759 /* Support Files */,
+			);
+			name = hpple;
+			path = hpple;
+			sourceTree = "<group>";
+		};
+		323310134CCB9FB087878770FFECF9E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08ECF4736828A4C7CCC9C4CC951A1343 /* FCFileManager */,
+				1FBB648B4B93FD3645E615B4C5F7919E /* hpple */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		39B82E9CDED9A140EBF7271F18800308 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88BB2FEBE02039CF92E136B4C5150EC6 /* Pods-hpple解析html */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5F219D33171DA41BFD8E442A6CAD845B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				301B0FF9DFD249819AA9E3CF78CC5FCA /* FCFileManager.modulemap */,
+				590BFEDB4358B8C04FD5092B9DD6FCC5 /* FCFileManager-dummy.m */,
+				E5C4A0DE9D3B6541CC17F3500E85AC8C /* FCFileManager-Info.plist */,
+				6EF43B9BB25C09A3A2FFD915EF5FCE95 /* FCFileManager-prefix.pch */,
+				BFDD534D6480D96941BA11DB7F67B1B9 /* FCFileManager-umbrella.h */,
+				1171837C199810B5B7C30F938B4CD089 /* FCFileManager.debug.xcconfig */,
+				5320AA96F3FBC9E264D9F4B24BADDCB8 /* FCFileManager.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FCFileManager";
+			sourceTree = "<group>";
+		};
+		88BB2FEBE02039CF92E136B4C5150EC6 /* Pods-hpple解析html */ = {
+			isa = PBXGroup;
+			children = (
+				E03CC2C523D4A24BD949689E165BCAD0 /* Pods-hpple解析html.modulemap */,
+				98BECC7A2EECA8AA162E84D55B9C1F89 /* Pods-hpple解析html-acknowledgements.markdown */,
+				F3B067EF001701B4BC6978FCFD91D7DE /* Pods-hpple解析html-acknowledgements.plist */,
+				0E6A1DAE6C0734B59F496DA821264569 /* Pods-hpple解析html-dummy.m */,
+				F344C0A4C400869575220C1FD790782D /* Pods-hpple解析html-frameworks.sh */,
+				15A199EC6C86400F56A4D929BCB3E226 /* Pods-hpple解析html-Info.plist */,
+				9634646866CDCF96CCDCB7BCA055F2E3 /* Pods-hpple解析html-umbrella.h */,
+				131E65442734B82335FD05744EB4FD96 /* Pods-hpple解析html.debug.xcconfig */,
+				DCDD4A255D310D48136CDBC1EDC3391C /* Pods-hpple解析html.release.xcconfig */,
+			);
+			name = "Pods-hpple解析html";
+			path = "Target Support Files/Pods-hpple解析html";
+			sourceTree = "<group>";
+		};
+		897970F1AD3CF54949E2DB7914E6F759 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AF15A2188427E43D7E4ADE0374C1432 /* hpple.modulemap */,
+				EA3CFA6CB84DFA667C292AAD78D917D9 /* hpple-dummy.m */,
+				9E0780AB5645EBCAD31711ADE673F918 /* hpple-Info.plist */,
+				E34D533062B7D2ADB1AC33D4B064A404 /* hpple-prefix.pch */,
+				2D919BEF3E810F83BFB9756EEDC8413B /* hpple-umbrella.h */,
+				0E067BD76EA24DEA1783A301E6B940F8 /* hpple.debug.xcconfig */,
+				8D96966E64EBEF43B4D6B2CFCE829F81 /* hpple.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/hpple";
+			sourceTree = "<group>";
+		};
+		A3E11866C04ED21F74520A124D366384 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				11A3F33705F062D6B58641557FD28FF0 /* Foundation.framework */,
+				C81FAF93CCA8702882D3563F845D35E8 /* ImageIO.framework */,
+				24A0609D5A0E4EDB2965BD5581EF29FA /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				323310134CCB9FB087878770FFECF9E1 /* Pods */,
+				E421C2FD90C8F86C9F629B2D357EBE9F /* Products */,
+				39B82E9CDED9A140EBF7271F18800308 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E421C2FD90C8F86C9F629B2D357EBE9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E47F80D6E715907B07DA62D9BD6E11A0 /* FCFileManager.framework */,
+				E08913ABA999BE7E8F5D1EED249BBD46 /* hpple.framework */,
+				E230DE09FA2EF15293F46A914802D144 /* Pods_hpple__html.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3DDBB6A1E8C0D1C9E4DD5E60D2CDB8AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C05362FC30B296374A9BAEBA62834A22 /* FCFileManager-umbrella.h in Headers */,
+				067FF47A4AA9331FD3C2087245EFBA2D /* FCFileManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		644D2183E9B9643DC73208AF686F7560 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D367BA1A3323A009167CD04F6CF71DC4 /* hpple-umbrella.h in Headers */,
+				21F4C27AE64D23CDE5908032107CD9BD /* TFHpple.h in Headers */,
+				ED9ACA3693DBBFD0433C7D2D5BA06EA0 /* TFHppleElement.h in Headers */,
+				79E83B5CF667F5AD8DD9705C2B471441 /* XPathQuery.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CD882B4FC09C936B240771CFFEA4C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EADA9DAB84E2C7F2E39C35DD0A7ADDFF /* Pods-hpple解析html-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		08EA1B1037E218623327F91BA2E4A68E /* Pods-hpple解析html */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0043BD175606EE8C3599824A0457DF5B /* Build configuration list for PBXNativeTarget "Pods-hpple解析html" */;
+			buildPhases = (
+				66CD882B4FC09C936B240771CFFEA4C2 /* Headers */,
+				6F668B49B811F12D23EC343FBEE20F21 /* Sources */,
+				79C2FFAD6B773F67BE52C462CE3DACB7 /* Frameworks */,
+				6CC1C3299B8B17E0DFBC5D5486BD0F37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				154C6E51397E3A9D4C230BE0CF401A4A /* PBXTargetDependency */,
+				8A999CB7AF8B11A98190233EE919051E /* PBXTargetDependency */,
+			);
+			name = "Pods-hpple解析html";
+			productName = "Pods-hpple解析html";
+			productReference = E230DE09FA2EF15293F46A914802D144 /* Pods_hpple__html.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6D6E68B14CE9C73B6328D555F75A7169 /* hpple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AE4735711DE6C54E454FE6B0E343E69 /* Build configuration list for PBXNativeTarget "hpple" */;
+			buildPhases = (
+				644D2183E9B9643DC73208AF686F7560 /* Headers */,
+				7E140F852EB356F09A5F8345BB9BB2CB /* Sources */,
+				9B1E48EFA25B90C57945C54FC317330E /* Frameworks */,
+				21B69C45EB7A2BA653CB895F6EF5C631 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hpple;
+			productName = hpple;
+			productReference = E08913ABA999BE7E8F5D1EED249BBD46 /* hpple.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFDE4C71771901FDBEF496602452E2EE /* FCFileManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D04C17B17488D13F7A8946945ED016A /* Build configuration list for PBXNativeTarget "FCFileManager" */;
+			buildPhases = (
+				3DDBB6A1E8C0D1C9E4DD5E60D2CDB8AF /* Headers */,
+				6DD8146D4B06228F75099014C34731F7 /* Sources */,
+				54594F886A90FF69F474146E9AD3CA8E /* Frameworks */,
+				C4B70B3F5A42BCA3EDB3ECB09833540F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FCFileManager;
+			productName = FCFileManager;
+			productReference = E47F80D6E715907B07DA62D9BD6E11A0 /* FCFileManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E421C2FD90C8F86C9F629B2D357EBE9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFDE4C71771901FDBEF496602452E2EE /* FCFileManager */,
+				6D6E68B14CE9C73B6328D555F75A7169 /* hpple */,
+				08EA1B1037E218623327F91BA2E4A68E /* Pods-hpple解析html */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21B69C45EB7A2BA653CB895F6EF5C631 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC1C3299B8B17E0DFBC5D5486BD0F37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B70B3F5A42BCA3EDB3ECB09833540F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DD8146D4B06228F75099014C34731F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1633049980A39ED7F41AA4EBCAF8CF4 /* FCFileManager-dummy.m in Sources */,
+				11341C7139AB4F56FEFD9E98BD895D9C /* FCFileManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F668B49B811F12D23EC343FBEE20F21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E2C7E5BDB7601C5B3797B49E79096E /* Pods-hpple解析html-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E140F852EB356F09A5F8345BB9BB2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E32A82F1EFFD9334141FAC8197C373F /* hpple-dummy.m in Sources */,
+				8E270FBD703055B6D241EEB9A9F325F5 /* TFHpple.m in Sources */,
+				3AD2B4D5758563A8938CD4CFA4D720AF /* TFHppleElement.m in Sources */,
+				9C05BA02E1F4778791D9C4CD22D4BB13 /* XPathQuery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		154C6E51397E3A9D4C230BE0CF401A4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FCFileManager;
+			target = CFDE4C71771901FDBEF496602452E2EE /* FCFileManager */;
+			targetProxy = 6BC9C54488E783AE2C78F5E683F153C6 /* PBXContainerItemProxy */;
+		};
+		8A999CB7AF8B11A98190233EE919051E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = hpple;
+			target = 6D6E68B14CE9C73B6328D555F75A7169 /* hpple */;
+			targetProxy = BEC128FF1C59D6B0FA0B82345DB5B7A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13A06F3D6F6DEE4B90BBCBD7A83CF85E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E067BD76EA24DEA1783A301E6B940F8 /* hpple.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/hpple/hpple-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/hpple/hpple-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/hpple/hpple.modulemap";
+				PRODUCT_MODULE_NAME = hpple;
+				PRODUCT_NAME = hpple;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		15A1F0F4F3308678CA4A0452AFD4769B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D96966E64EBEF43B4D6B2CFCE829F81 /* hpple.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/hpple/hpple-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/hpple/hpple-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/hpple/hpple.modulemap";
+				PRODUCT_MODULE_NAME = hpple;
+				PRODUCT_NAME = hpple;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		311540F8174971B3893C7B6F0989DDF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCDD4A255D310D48136CDBC1EDC3391C /* Pods-hpple解析html.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hpple解析html/Pods-hpple解析html-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hpple解析html/Pods-hpple解析html.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5535F4546B0B08BF126E5B80AC862C41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 131E65442734B82335FD05744EB4FD96 /* Pods-hpple解析html.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hpple解析html/Pods-hpple解析html-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hpple解析html/Pods-hpple解析html.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74F5244056F9795725C75A872A7EA104 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5320AA96F3FBC9E264D9F4B24BADDCB8 /* FCFileManager.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FCFileManager/FCFileManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FCFileManager/FCFileManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FCFileManager/FCFileManager.modulemap";
+				PRODUCT_MODULE_NAME = FCFileManager;
+				PRODUCT_NAME = FCFileManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B8D07C8178F5979B1F8AD355204B818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1171837C199810B5B7C30F938B4CD089 /* FCFileManager.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FCFileManager/FCFileManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FCFileManager/FCFileManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FCFileManager/FCFileManager.modulemap";
+				PRODUCT_MODULE_NAME = FCFileManager;
+				PRODUCT_NAME = FCFileManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0043BD175606EE8C3599824A0457DF5B /* Build configuration list for PBXNativeTarget "Pods-hpple解析html" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5535F4546B0B08BF126E5B80AC862C41 /* Debug */,
+				311540F8174971B3893C7B6F0989DDF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AE4735711DE6C54E454FE6B0E343E69 /* Build configuration list for PBXNativeTarget "hpple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13A06F3D6F6DEE4B90BBCBD7A83CF85E /* Debug */,
+				15A1F0F4F3308678CA4A0452AFD4769B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D04C17B17488D13F7A8946945ED016A /* Build configuration list for PBXNativeTarget "FCFileManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B8D07C8178F5979B1F8AD355204B818 /* Debug */,
+				74F5244056F9795725C75A872A7EA104 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
