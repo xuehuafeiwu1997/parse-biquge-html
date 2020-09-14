@@ -76,32 +76,9 @@
         NSLog(@"章节目录解析失败");
         return;
     }
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < self.chapterArr.count; i++) {
         Chapter *chapter = [self.chapterArr objectAtIndex:i];
-        @synchronized (chapter) {
-            [self getCorrespondedDataByChapter:chapter];
-        }
-    }
-}
-
-- (void)parseHtmlByUrl:(NSURL *)url {
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:data];
-    TFHppleElement *element = [hpple peekAtSearchWithXPathQuery:@"//h1"];
-    NSLog(@"章节的名称为:%@",element.text);
-    
-    NSArray *elements = [hpple searchWithXPathQuery:@"//div"];
-    NSLog(@"当前网页总的节点数:%ld",elements.count);
-    for (int i = 0; i < elements.count; i++) {
-        TFHppleElement *e = [elements objectAtIndex:i];
-        if ([[[e attributes] objectForKey:@"id"] isEqualToString:@"content"]) {
-            //这里进入的是笔趣阁的content字段
-            NSString *content = [e.raw copy];
-            content = [self filterSepcialSymbol:content];
-            NSLog(@"过滤后的字符串的内容为:%@",content);
-            [self writeToFileByContent:content WithTitle:element.text];
-            NSLog(@"----------第14章的内容输出完毕---------");
-        }
+        [self getCorrespondedDataByChapter:chapter];
     }
 }
 
@@ -120,7 +97,6 @@
 }
 
 - (void)parseHtmlByChapter:(Chapter *)chapter WithData:(NSData *)data {
-//    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"我师兄实在是太稳健了" ofType:@"html"]];
     TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:data];
 //    /*
 //     这里也可以使用chapter中传进来的name,这里对每个传进来的网页都进行解析
@@ -129,7 +105,6 @@
     for (TFHppleElement *hppleElement in array) {
         NSLog(@"标题为%@",hppleElement.text);
         chapter.chapterName = hppleElement.text;
-//        [self createNovelNameDictionaryIfNotExist:hppleElement.text];
     }
     NSArray *elements = [hpple searchWithXPathQuery:@"//div"];
     NSLog(@"当前网页总的节点数:%ld",elements.count);
@@ -154,10 +129,6 @@
 //        NSLog(@"5 : %@",[e firstChildWithTagName:@"meta"]);
 //        NSLog(@"------完成对一个文件的解析--------");
     }
-}
-
-- (NSURL *)handleSplitUrl:(NSURL *)url {
-    return nil;
 }
 
 - (NSString *)filterSepcialSymbol:(NSString *)content {
@@ -222,5 +193,28 @@
     });
     return session;
 }
+
+//根据某一章节的网址解析（主要用于测试）
+- (void)parseHtmlByUrl:(NSURL *)url {
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:data];
+    TFHppleElement *element = [hpple peekAtSearchWithXPathQuery:@"//h1"];
+    NSLog(@"章节的名称为:%@",element.text);
+    
+    NSArray *elements = [hpple searchWithXPathQuery:@"//div"];
+    NSLog(@"当前网页总的节点数:%ld",elements.count);
+    for (int i = 0; i < elements.count; i++) {
+        TFHppleElement *e = [elements objectAtIndex:i];
+        if ([[[e attributes] objectForKey:@"id"] isEqualToString:@"content"]) {
+            //这里进入的是笔趣阁的content字段
+            NSString *content = [e.raw copy];
+            content = [self filterSepcialSymbol:content];
+            NSLog(@"过滤后的字符串的内容为:%@",content);
+            [self writeToFileByContent:content WithTitle:element.text];
+            NSLog(@"----------第14章的内容输出完毕---------");
+        }
+    }
+}
+
 
 @end
