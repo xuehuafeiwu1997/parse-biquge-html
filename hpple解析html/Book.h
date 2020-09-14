@@ -1,5 +1,5 @@
 //
-//  Chapter.h
+//  Book.h
 //  hpple解析html
 //
 //  Created by 许明洋 on 2020/9/3.
@@ -10,11 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Chapter : NSObject
+@interface Book : NSObject
 
-@property (nonatomic, assign) NSInteger chapterId;
-@property (nonatomic, copy) NSString *chapterName;
-@property (nonatomic, copy) NSString *chapterUrlString;
+@property (nonatomic, copy) NSString *bookName;
+@property (nonatomic, strong) NSURL *url;
 
 @end
 

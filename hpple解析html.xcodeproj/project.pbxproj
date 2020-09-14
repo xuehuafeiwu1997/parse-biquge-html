@@ -15,6 +15,7 @@
 		B64BE4DC24EE61B700DBA5AD /* 我师兄实在是太稳健了.html in Resources */ = {isa = PBXBuildFile; fileRef = B64BE4DB24EE61B700DBA5AD /* 我师兄实在是太稳健了.html */; };
 		B6F8FB5C250081D40050C2F1 /* 我师兄实在是太稳健了目录.html in Resources */ = {isa = PBXBuildFile; fileRef = B6F8FB5B250081D40050C2F1 /* 我师兄实在是太稳健了目录.html */; };
 		B6F8FBFC2500D1CE0050C2F1 /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F8FBFB2500D1CE0050C2F1 /* Chapter.m */; };
+		B6F8FBFF2500E2720050C2F1 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F8FBFE2500E2720050C2F1 /* Book.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		B6F8FB5B250081D40050C2F1 /* 我师兄实在是太稳健了目录.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "我师兄实在是太稳健了目录.html"; sourceTree = "<group>"; };
 		B6F8FBFA2500D1CE0050C2F1 /* Chapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
 		B6F8FBFB2500D1CE0050C2F1 /* Chapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
+		B6F8FBFD2500E2720050C2F1 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		B6F8FBFE2500E2720050C2F1 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		C26E7B13E53CF04BF3255208 /* Pods-hpple解析html.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpple解析html.debug.xcconfig"; path = "Target Support Files/Pods-hpple解析html/Pods-hpple解析html.debug.xcconfig"; sourceTree = "<group>"; };
 		D68602EC22129B2EAC3FD9B8 /* Pods-hpple解析html.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpple解析html.release.xcconfig"; path = "Target Support Files/Pods-hpple解析html/Pods-hpple解析html.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +87,8 @@
 				B64BE4C924EE5E4600DBA5AD /* ViewController.m */,
 				B6F8FBFA2500D1CE0050C2F1 /* Chapter.h */,
 				B6F8FBFB2500D1CE0050C2F1 /* Chapter.m */,
+				B6F8FBFD2500E2720050C2F1 /* Book.h */,
+				B6F8FBFE2500E2720050C2F1 /* Book.m */,
 				B64BE4CE24EE5E4A00DBA5AD /* Assets.xcassets */,
 				B64BE4D024EE5E4A00DBA5AD /* LaunchScreen.storyboard */,
 				B64BE4D324EE5E4A00DBA5AD /* Info.plist */,
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F8FBFF2500E2720050C2F1 /* Book.m in Sources */,
 				B64BE4CA24EE5E4600DBA5AD /* ViewController.m in Sources */,
 				B64BE4C424EE5E4600DBA5AD /* AppDelegate.m in Sources */,
 				B64BE4D524EE5E4A00DBA5AD /* main.m in Sources */,
