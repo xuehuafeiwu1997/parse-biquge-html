@@ -12,6 +12,8 @@
 #import "Chapter.h"
 #import "Book.h"
 
+NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotification";
+
 @interface ViewController ()
 
 @property(nonatomic, strong) NSMutableArray *chapterArr;
@@ -34,8 +36,21 @@
     self.chapterArr = [NSMutableArray array];
     self.path = [FCFileManager pathForLibraryDirectoryWithPath:@"Novel"];
     self.book = [[Book alloc] init];
-    
+    [self addObserve];
     [self parseNovelCatalog];
+}
+
+- (void)addObserve {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WriteFileBySignleThread:) name:WriteChapterSuccessNotification object:nil];
+}
+
+- (void)WriteFileBySignleThread:(NSNotification *)notification {
+    NSInteger index = [notification.userInfo[@"chapterId"] integerValue];
+    if (index >= 10) {
+        return;
+    }
+    Chapter *chapter = [self.chapterArr objectAtIndex:index];
+    [self getCorrespondedDataByChapter:chapter];
 }
 
 //解析小说的章节目录
@@ -76,10 +91,12 @@
         NSLog(@"章节目录解析失败");
         return;
     }
-    for (int i = 0; i < self.chapterArr.count; i++) {
-        Chapter *chapter = [self.chapterArr objectAtIndex:i];
-        [self getCorrespondedDataByChapter:chapter];
-    }
+    Chapter *chapter = [self.chapterArr objectAtIndex:0];
+    [self getCorrespondedDataByChapter:chapter];
+//    for (int i = 0; i < self.chapterArr.count; i++) {
+//        Chapter *chapter = [self.chapterArr objectAtIndex:i];
+//        [self getCorrespondedDataByChapter:chapter];
+//    }
 }
 
 - (void)getCorrespondedDataByChapter:(Chapter *)chapter {
@@ -119,8 +136,9 @@
             NSString *content = [e.raw copy];
             content = [self filterSepcialSymbol:content];
             NSLog(@"过滤后的字符串的内容为:%@",content);
-            [self writeToFileByContent:content WithTitle:chapter.chapterName];
+            [self writeToFileByContent:content WithTitle:chapter.chapterName WithId:chapter.chapterId];
             NSLog(@"----------第%ld章的内容输出完毕---------",(long)chapter.chapterId);
+            return;
         }
 //        NSLog(@"1 : %@",[e text]);
 //        NSLog(@"2 : %@",[e tagName]);
@@ -152,7 +170,7 @@
     self.path = destinationPath;
 }
 
-- (void)writeToFileByContent:(NSString *)content WithTitle:(NSString *)title{
+- (void)writeToFileByContent:(NSString *)content WithTitle:(NSString *)title WithId:(NSInteger)chapterId{
     NSString *fileName = [title stringByAppendingPathExtension:@"txt"];
     NSString *destinationPath = [self.path stringByAppendingPathComponent:fileName];
     if (![FCFileManager existsItemAtPath:destinationPath]) {
@@ -169,6 +187,7 @@
     if (error) {
         NSLog(@"写入文件失败的原因是%@",error);
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:WriteChapterSuccessNotification object:nil userInfo:@{@"chapterId":@(chapterId)}];
 }
 
 - (UIButton *)saveButton {
@@ -210,11 +229,14 @@
             NSString *content = [e.raw copy];
             content = [self filterSepcialSymbol:content];
             NSLog(@"过滤后的字符串的内容为:%@",content);
-            [self writeToFileByContent:content WithTitle:element.text];
+            [self writeToFileByContent:content WithTitle:element.text WithId:i];
             NSLog(@"----------第14章的内容输出完毕---------");
         }
     }
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end
