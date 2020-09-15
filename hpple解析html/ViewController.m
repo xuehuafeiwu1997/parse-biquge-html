@@ -46,7 +46,7 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
 
 - (void)WriteFileBySignleThread:(NSNotification *)notification {
     NSInteger index = [notification.userInfo[@"chapterId"] integerValue];
-    if (index >= 10) {
+    if (index >= self.chapterArr.count - 1) {
         return;
     }
     Chapter *chapter = [self.chapterArr objectAtIndex:index];
@@ -161,6 +161,7 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
     NSString *destinationPath = [self.path stringByAppendingPathComponent:bookName];
     NSLog(@"当前的沙盒存储地址为:%@",destinationPath);
     if ([FCFileManager existsItemAtPath:destinationPath]) {
+        self.path = destinationPath;
         return;
     }
     NSError *error = nil;
