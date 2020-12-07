@@ -37,7 +37,30 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
     self.path = [FCFileManager pathForLibraryDirectoryWithPath:@"Novel"];
     self.book = [[Book alloc] init];
     [self addObserve];
-    [self parseNovelCatalog];
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.biquge.info/74_74132/"];
+//    NSURL *url = [NSURL URLWithString:@"http://m.biquges.com/5_39148/"];
+    [[[self session] dataTaskWithRequest:[self getRequestByUrl:url] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"网络请求失败，失败的原因是%@",error);
+                return;
+            }
+        NSString *receiver = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSData *receiverData = [receiver dataUsingEncoding:NSUTF8StringEncoding];
+        
+            [self parseNovelCatalogWithData:receiverData withUrl:url];
+        }] resume];
+//    [[[self session] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//            if (error) {
+//                NSLog(@"网络请求失败，失败的原因是%@",error);
+//                return;
+//            }
+//        NSString *receiver = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        NSData *receiverData = [receiver dataUsingEncoding:NSUTF8StringEncoding];
+//            [self parseNovelCatalogWithData:receiverData withUrl:url];
+//        }] resume];
+    
+//    [self parseHtmlByUrl:[NSURL URLWithString:@"http://www.biquge.info/74_74132/14482860.html?skvmdm=kfwye2&cijkry=k1yuj3"]];
 }
 
 - (void)addObserve {
@@ -54,9 +77,12 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
 }
 
 //解析小说的章节目录
-- (void)parseNovelCatalog {
-    NSURL *url = [NSURL URLWithString:@"http://www.xbiquge.la/19/885"];
-    NSData *data = [NSData dataWithContentsOfURL:url];
+- (void)parseNovelCatalogWithData:(NSData *)data withUrl:(NSURL *)url {
+//    NSURL *url = [NSURL URLWithString:@"https://www.biquge11.com/0_825/"];//一念永恒
+//    NSURL *url = [NSURL URLWithString:@"http://www.biquge.info/74_74132/?kkzqfa=kf0pk3&uirspm=k1sx03"];//我师兄实在是太稳健了
+    //这里出错，主要是因为NSData在请求基于网络的url时会报错，这个方法只适用于小文件转换为NSData，大文件需要使用另外的方法，对于网络上的请求，我们需要使用dataTask
+    
+//    NSData *data = [NSData dataWithContentsOfURL:url];
     self.book.url = url;
     TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:data];
     TFHppleElement *hppleElement = [hpple peekAtSearchWithXPathQuery:@"//h1"];
@@ -104,13 +130,24 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
         NSLog(@"解析html网页出现错误");
         return;
     }
-    self.book.url = [NSURL URLWithString:@"http://www.xbiquge.la"];
+//    self.book.url = [NSURL URLWithString:@"http://www.xbiquge.la"];
     NSURL *url = [self.book.url URLByAppendingPathComponent:chapter.chapterUrlString];
-    [[[self session] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSString *receiver = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSData *receiverData = [receiver dataUsingEncoding:NSUTF8StringEncoding];
-        [self parseHtmlByChapter:chapter WithData:receiverData];
-    }] resume];
+    [[[self session] dataTaskWithRequest:[self getRequestByUrl:url] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"网络请求失败的原因为%@",error);
+            }
+            NSString *receiver = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSData *receiverData = [receiver dataUsingEncoding:NSUTF8StringEncoding];
+            [self parseHtmlByChapter:chapter WithData:receiverData];
+            }] resume];
+//    [[[self session] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        if (error) {
+//            NSLog(@"网络请求失败的原因为%@",error);
+//        }
+//        NSString *receiver = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        NSData *receiverData = [receiver dataUsingEncoding:NSUTF8StringEncoding];
+//        [self parseHtmlByChapter:chapter WithData:receiverData];
+//    }] resume];
 }
 
 - (void)parseHtmlByChapter:(Chapter *)chapter WithData:(NSData *)data {
@@ -204,11 +241,28 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
 }
 
 #pragma mark - URLSession
+- (NSMutableURLRequest *)getRequestByUrl:(NSURL *)url {
+    //设置不使用本地缓存的策略
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPShouldHandleCookies:YES];
+    [request addValue:@"BDUSS_BFESS=p1ZDQ0S1JBVmdiWU5rYTBsNWp-SHVNMnU1dWQ4Nnd3UmFuNGRFemFQU1NJdDVmRVFBQUFBJCQAAAAAAAAAAAEAAAD97j6BeHVlaHVhZmVpd3U5NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKVtl-SlbZfSX; BAIDUID_BFESS=5CCFBFCB4D4E22DE15B993ABAA502328:SL=0:NR=10:FG=1" forHTTPHeaderField:@"Cookie"];
+    [request addValue:@"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" forHTTPHeaderField:@"User-Agent"];
+    return request;
+}
+
 - (NSURLSession *)session {
     static NSURLSession *session;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        //手机端的user-agent
+//        configuration.HTTPAdditionalHeaders = @{
+//            @"User-Agent": @"Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/87.0.4280.77 Mobile/15E148 Safari/604.1"};
+        //电脑端的user-agent
+//        configuration.HTTPAdditionalHeaders = @{
+//            @"User-Agent":@"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"
+//        };
         session = [NSURLSession sessionWithConfiguration:configuration delegate:nil delegateQueue:nil];
     });
     return session;
