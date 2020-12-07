@@ -92,6 +92,7 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
         NSString *receiver = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSData *receiverData = [receiver dataUsingEncoding:NSUTF8StringEncoding];
         if (![self isNormalHtmlData:receiverData]) {
+            //如果获得的仍然是请求参数，继续请求，直到获得我们想要的网页的html地址为止
             [self hanleHtmlDataAndRequestAgain:receiverData];
             return;
         }
