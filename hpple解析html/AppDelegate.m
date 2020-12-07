@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "TestViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     ViewController *vc = [[ViewController alloc] init];
+//    TestViewController *vc = [[TestViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     return YES;

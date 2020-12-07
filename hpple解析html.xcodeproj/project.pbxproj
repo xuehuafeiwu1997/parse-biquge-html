@@ -13,6 +13,8 @@
 		B64BE4D224EE5E4A00DBA5AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64BE4D024EE5E4A00DBA5AD /* LaunchScreen.storyboard */; };
 		B64BE4D524EE5E4A00DBA5AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B64BE4D424EE5E4A00DBA5AD /* main.m */; };
 		B64BE4DC24EE61B700DBA5AD /* 我师兄实在是太稳健了.html in Resources */ = {isa = PBXBuildFile; fileRef = B64BE4DB24EE61B700DBA5AD /* 我师兄实在是太稳健了.html */; };
+		B6747DE6257E284D0059A6AF /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B6747DE5257E284D0059A6AF /* index.html */; };
+		B6747DEA257E28660059A6AF /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6747DE9257E28660059A6AF /* TestViewController.m */; };
 		B6F8FB5C250081D40050C2F1 /* 我师兄实在是太稳健了目录.html in Resources */ = {isa = PBXBuildFile; fileRef = B6F8FB5B250081D40050C2F1 /* 我师兄实在是太稳健了目录.html */; };
 		B6F8FBFC2500D1CE0050C2F1 /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F8FBFB2500D1CE0050C2F1 /* Chapter.m */; };
 		B6F8FBFF2500E2720050C2F1 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F8FBFE2500E2720050C2F1 /* Book.m */; };
@@ -30,6 +32,9 @@
 		B64BE4D324EE5E4A00DBA5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B64BE4D424EE5E4A00DBA5AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B64BE4DB24EE61B700DBA5AD /* 我师兄实在是太稳健了.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "我师兄实在是太稳健了.html"; sourceTree = "<group>"; };
+		B6747DE5257E284D0059A6AF /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		B6747DE8257E28660059A6AF /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		B6747DE9257E28660059A6AF /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		B6F8FB5B250081D40050C2F1 /* 我师兄实在是太稳健了目录.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "我师兄实在是太稳健了目录.html"; sourceTree = "<group>"; };
 		B6F8FBFA2500D1CE0050C2F1 /* Chapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
 		B6F8FBFB2500D1CE0050C2F1 /* Chapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
@@ -85,6 +90,8 @@
 				B64BE4C324EE5E4600DBA5AD /* AppDelegate.m */,
 				B64BE4C824EE5E4600DBA5AD /* ViewController.h */,
 				B64BE4C924EE5E4600DBA5AD /* ViewController.m */,
+				B6747DE8257E28660059A6AF /* TestViewController.h */,
+				B6747DE9257E28660059A6AF /* TestViewController.m */,
 				B6F8FBFA2500D1CE0050C2F1 /* Chapter.h */,
 				B6F8FBFB2500D1CE0050C2F1 /* Chapter.m */,
 				B6F8FBFD2500E2720050C2F1 /* Book.h */,
@@ -102,6 +109,7 @@
 			children = (
 				B64BE4DB24EE61B700DBA5AD /* 我师兄实在是太稳健了.html */,
 				B6F8FB5B250081D40050C2F1 /* 我师兄实在是太稳健了目录.html */,
+				B6747DE5257E284D0059A6AF /* index.html */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6747DE6257E284D0059A6AF /* index.html in Resources */,
 				B64BE4DC24EE61B700DBA5AD /* 我师兄实在是太稳健了.html in Resources */,
 				B6F8FB5C250081D40050C2F1 /* 我师兄实在是太稳健了目录.html in Resources */,
 				B64BE4D224EE5E4A00DBA5AD /* LaunchScreen.storyboard in Resources */,
@@ -229,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6747DEA257E28660059A6AF /* TestViewController.m in Sources */,
 				B6F8FBFF2500E2720050C2F1 /* Book.m in Sources */,
 				B64BE4CA24EE5E4600DBA5AD /* ViewController.m in Sources */,
 				B64BE4C424EE5E4600DBA5AD /* AppDelegate.m in Sources */,

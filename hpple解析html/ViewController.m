@@ -20,6 +20,7 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
 @property(nonatomic, copy) NSString *path;
 @property(nonatomic, strong) Book *book;
 @property(nonatomic, strong) UIButton *saveButton;
+@property(nonatomic, copy) NSString *str;
 
 @end
 
@@ -38,7 +39,8 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
     self.book = [[Book alloc] init];
     [self addObserve];
     
-    NSURL *url = [NSURL URLWithString:@"http://www.biquge.info/74_74132/"];
+    self.str = @"http://www.biquge.info/74_74132/";
+    NSURL *url = [NSURL URLWithString:self.str];
 //    NSURL *url = [NSURL URLWithString:@"http://m.biquges.com/5_39148/"];
     [[[self session] dataTaskWithRequest:[self getRequestByUrl:url] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             if (error) {
@@ -47,6 +49,12 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
             }
         NSString *receiver = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSData *receiverData = [receiver dataUsingEncoding:NSUTF8StringEncoding];
+        
+        //获得的是待验证的字符串，需要做的是将返回的href放入到原本的url中重新请求
+        if (![self isNormalHtmlData:receiverData]) {
+            [self hanleHtmlDataAndRequestAgain:receiverData];
+            return;
+        }
         
             [self parseNovelCatalogWithData:receiverData withUrl:url];
         }] resume];
@@ -61,6 +69,30 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
 //        }] resume];
     
 //    [self parseHtmlByUrl:[NSURL URLWithString:@"http://www.biquge.info/74_74132/14482860.html?skvmdm=kfwye2&cijkry=k1yuj3"]];
+}
+
+- (void)hanleHtmlDataAndRequestAgain:(NSData *)data {
+    TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:data];
+    TFHppleElement *hppleElement = [hpple peekAtSearchWithXPathQuery:@"//a"];
+    NSString *parameters = [hppleElement objectForKey:@"href"];
+    if (parameters == nil) {
+        NSLog(@"网页地址不是相应的带验证参数");
+        return;
+    }
+    NSArray *arr = [parameters componentsSeparatedByString:@"/"];
+    NSString *parameter = arr.lastObject;
+    self.str = [self.str stringByAppendingFormat:@"%@", parameter];
+    NSURL *url = [NSURL URLWithString:self.str];
+    NSLog(@"当前的initStr为%@",self.str);
+}
+
+- (BOOL)isNormalHtmlData:(NSData *)data {
+    TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:data];
+    TFHppleElement *hppleElement = [hpple peekAtSearchWithXPathQuery:@"//h1"];
+    if (hppleElement.text == nil) {
+        return NO;
+    }
+    return YES;
 }
 
 - (void)addObserve {
