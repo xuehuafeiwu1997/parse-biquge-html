@@ -84,6 +84,19 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
     self.str = [self.str stringByAppendingFormat:@"%@", parameter];
     NSURL *url = [NSURL URLWithString:self.str];
     NSLog(@"当前的initStr为%@",self.str);
+    [[[self session] dataTaskWithRequest:[self getRequestByUrl:url] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"当前的网络请求出错，出错的原因为%@",error);
+            return;
+        }
+        NSString *receiver = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSData *receiverData = [receiver dataUsingEncoding:NSUTF8StringEncoding];
+        if (![self isNormalHtmlData:receiverData]) {
+            [self hanleHtmlDataAndRequestAgain:receiverData];
+            return;
+        }
+        [self parseNovelCatalogWithData:receiverData withUrl:url];
+    }]resume] ;
 }
 
 - (BOOL)isNormalHtmlData:(NSData *)data {
