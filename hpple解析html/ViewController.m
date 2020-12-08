@@ -294,6 +294,8 @@ NSString *const WriteChapterSuccessNotification = @"WriteChapterSuccessNotificat
     [request setHTTPShouldHandleCookies:YES];
     [request addValue:@"BDUSS_BFESS=p1ZDQ0S1JBVmdiWU5rYTBsNWp-SHVNMnU1dWQ4Nnd3UmFuNGRFemFQU1NJdDVmRVFBQUFBJCQAAAAAAAAAAAEAAAD97j6BeHVlaHVhZmVpd3U5NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKVtl-SlbZfSX; BAIDUID_BFESS=5CCFBFCB4D4E22DE15B993ABAA502328:SL=0:NR=10:FG=1" forHTTPHeaderField:@"Cookie"];
     [request addValue:@"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" forHTTPHeaderField:@"User-Agent"];
+    //添加host字段，网络请求会超时，目前还不知道为什么
+//    [request addValue:@"www.biquge.info" forHTTPHeaderField:@"Host"];
     return request;
 }
 

@@ -8,4 +8,5 @@ target 'hpple解析html' do
   # Pods for hpple解析html
    pod 'hpple'
    pod 'FCFileManager'
+   pod 'Masonry'
 end

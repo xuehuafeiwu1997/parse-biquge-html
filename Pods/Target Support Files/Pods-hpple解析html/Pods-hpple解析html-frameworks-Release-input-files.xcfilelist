@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-hpple解析html/Pods-hpple解析html-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/FCFileManager/FCFileManager.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
 ${BUILT_PRODUCTS_DIR}/hpple/hpple.framework

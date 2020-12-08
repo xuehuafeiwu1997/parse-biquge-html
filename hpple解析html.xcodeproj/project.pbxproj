@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61E878B257F241100ADEA5E /* IPAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61E878A257F241100ADEA5E /* IPAddressViewController.m */; };
 		B64BE4C424EE5E4600DBA5AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B64BE4C324EE5E4600DBA5AD /* AppDelegate.m */; };
 		B64BE4CA24EE5E4600DBA5AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64BE4C924EE5E4600DBA5AD /* ViewController.m */; };
 		B64BE4CF24EE5E4A00DBA5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64BE4CE24EE5E4A00DBA5AD /* Assets.xcassets */; };
@@ -22,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		43AB02D5138EFE7061E9A580 /* Pods_hpple__html.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpple__html.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B61E8789257F241100ADEA5E /* IPAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPAddressViewController.h; sourceTree = "<group>"; };
+		B61E878A257F241100ADEA5E /* IPAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPAddressViewController.m; sourceTree = "<group>"; };
 		B64BE4BF24EE5E4600DBA5AD /* hpple解析html.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hpple解析html.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B64BE4C224EE5E4600DBA5AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B64BE4C324EE5E4600DBA5AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				B64BE4C924EE5E4600DBA5AD /* ViewController.m */,
 				B6747DE8257E28660059A6AF /* TestViewController.h */,
 				B6747DE9257E28660059A6AF /* TestViewController.m */,
+				B61E8789257F241100ADEA5E /* IPAddressViewController.h */,
+				B61E878A257F241100ADEA5E /* IPAddressViewController.m */,
 				B6F8FBFA2500D1CE0050C2F1 /* Chapter.h */,
 				B6F8FBFB2500D1CE0050C2F1 /* Chapter.m */,
 				B6F8FBFD2500E2720050C2F1 /* Book.h */,
@@ -240,6 +245,7 @@
 			files = (
 				B6747DEA257E28660059A6AF /* TestViewController.m in Sources */,
 				B6F8FBFF2500E2720050C2F1 /* Book.m in Sources */,
+				B61E878B257F241100ADEA5E /* IPAddressViewController.m in Sources */,
 				B64BE4CA24EE5E4600DBA5AD /* ViewController.m in Sources */,
 				B64BE4C424EE5E4600DBA5AD /* AppDelegate.m in Sources */,
 				B64BE4D524EE5E4A00DBA5AD /* main.m in Sources */,

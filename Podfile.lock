@@ -1,20 +1,24 @@
 PODS:
   - FCFileManager (1.0.20)
   - hpple (0.2.0)
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
   - FCFileManager
   - hpple
+  - Masonry
 
 SPEC REPOS:
   trunk:
     - FCFileManager
     - hpple
+    - Masonry
 
 SPEC CHECKSUMS:
   FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 58f3b07278e55eb16af1d66a56968b6efa132209
+PODFILE CHECKSUM: de53fbcdde2fd32f1b8fac10c19e8f260b010478
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.10.0
