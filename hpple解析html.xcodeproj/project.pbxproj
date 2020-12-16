@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B61E878B257F241100ADEA5E /* IPAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61E878A257F241100ADEA5E /* IPAddressViewController.m */; };
+		B6283D5025874EFC00A11258 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6283D4F25874EFC00A11258 /* Test2ViewController.m */; };
 		B64BE4C424EE5E4600DBA5AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B64BE4C324EE5E4600DBA5AD /* AppDelegate.m */; };
 		B64BE4CA24EE5E4600DBA5AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64BE4C924EE5E4600DBA5AD /* ViewController.m */; };
 		B64BE4CF24EE5E4A00DBA5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64BE4CE24EE5E4A00DBA5AD /* Assets.xcassets */; };
@@ -25,6 +26,8 @@
 		43AB02D5138EFE7061E9A580 /* Pods_hpple__html.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpple__html.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61E8789257F241100ADEA5E /* IPAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPAddressViewController.h; sourceTree = "<group>"; };
 		B61E878A257F241100ADEA5E /* IPAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPAddressViewController.m; sourceTree = "<group>"; };
+		B6283D4E25874EFC00A11258 /* Test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		B6283D4F25874EFC00A11258 /* Test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
 		B64BE4BF24EE5E4600DBA5AD /* hpple解析html.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hpple解析html.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B64BE4C224EE5E4600DBA5AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B64BE4C324EE5E4600DBA5AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,6 +38,8 @@
 		B64BE4D324EE5E4A00DBA5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B64BE4D424EE5E4A00DBA5AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B64BE4DB24EE61B700DBA5AD /* 我师兄实在是太稳健了.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "我师兄实在是太稳健了.html"; sourceTree = "<group>"; };
+		B665EC272587516600EA3131 /* TestAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAppConfig.h; sourceTree = "<group>"; };
+		B665EC282587518200EA3131 /* header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = header.pch; sourceTree = "<group>"; };
 		B6747DE5257E284D0059A6AF /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		B6747DE8257E28660059A6AF /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		B6747DE9257E28660059A6AF /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
@@ -91,12 +96,16 @@
 				B64BE4DD24EE61BE00DBA5AD /* resource */,
 				B64BE4C224EE5E4600DBA5AD /* AppDelegate.h */,
 				B64BE4C324EE5E4600DBA5AD /* AppDelegate.m */,
+				B665EC272587516600EA3131 /* TestAppConfig.h */,
+				B665EC282587518200EA3131 /* header.pch */,
 				B64BE4C824EE5E4600DBA5AD /* ViewController.h */,
 				B64BE4C924EE5E4600DBA5AD /* ViewController.m */,
 				B6747DE8257E28660059A6AF /* TestViewController.h */,
 				B6747DE9257E28660059A6AF /* TestViewController.m */,
 				B61E8789257F241100ADEA5E /* IPAddressViewController.h */,
 				B61E878A257F241100ADEA5E /* IPAddressViewController.m */,
+				B6283D4E25874EFC00A11258 /* Test2ViewController.h */,
+				B6283D4F25874EFC00A11258 /* Test2ViewController.m */,
 				B6F8FBFA2500D1CE0050C2F1 /* Chapter.h */,
 				B6F8FBFB2500D1CE0050C2F1 /* Chapter.m */,
 				B6F8FBFD2500E2720050C2F1 /* Book.h */,
@@ -244,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6747DEA257E28660059A6AF /* TestViewController.m in Sources */,
+				B6283D5025874EFC00A11258 /* Test2ViewController.m in Sources */,
 				B6F8FBFF2500E2720050C2F1 /* Book.m in Sources */,
 				B61E878B257F241100ADEA5E /* IPAddressViewController.m in Sources */,
 				B64BE4CA24EE5E4600DBA5AD /* ViewController.m in Sources */,

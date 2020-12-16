@@ -10,6 +10,8 @@
 #import "ViewController.h"
 #import "TestViewController.h"
 #import "IPAddressViewController.h"
+#import "Test2ViewController.h"
+//#import "header.pch"
 
 @interface AppDelegate ()
 
@@ -25,7 +27,11 @@
     [self.window makeKeyAndVisible];
 //    ViewController *vc = [[ViewController alloc] init];
 //    TestViewController *vc = [[TestViewController alloc] init];
-    IPAddressViewController *vc = [[IPAddressViewController alloc] init];
+//    IPAddressViewController *vc = [[IPAddressViewController alloc] init];
+#ifdef TEST_APP
+    NSLog(@"测试环境的代码");
+#endif
+    Test2ViewController *vc = [[Test2ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     return YES;

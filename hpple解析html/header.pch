@@ -1,0 +1,14 @@
+//
+//  header.pch
+//  hpple解析html
+//
+//  Created by 许明洋 on 2020/12/14.
+//  Copyright © 2020 许明洋. All rights reserved.
+//
+
+#ifndef header_pch
+#define header_pch
+
+#import "TestAppConfig.h"
+
+#endif /* header_pch */
